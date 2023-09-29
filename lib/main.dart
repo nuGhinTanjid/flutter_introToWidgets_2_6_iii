@@ -98,40 +98,42 @@ class HomeScreen extends StatelessWidget{
      body: SingleChildScrollView(
        child: Column(
          children: [
-           ListView.separated(
-             primary: false,
-               shrinkWrap: true,
-               scrollDirection: Axis.vertical,
-               padding: EdgeInsets.all(16),
+           Scrollbar(
+             child: ListView.separated(
+               primary: false,
+                 shrinkWrap: true,
+                 scrollDirection: Axis.vertical,
+                 padding: EdgeInsets.all(16),
 
-               itemCount: students.length,
-               itemBuilder: (context, index){
-                 return Column(
-                   children: [
-                     ListTile(
-                       title: Text(students[index]),
-                       // tileColor: Colors.grey.shade400,
-                       // title: Text('tonmoy'),
-                       // subtitle: Text('Tanjid'),
-                       // leading: Text('islam'),
-                       // trailing: Text('tit'),
-                     ),
-                     // Divider(
-                     //   height: 0.5,
-                     //   color: Colors.black,
-                     // )
-                   ],
-                 );
-               },
-                separatorBuilder: (context, index){
-                 return  Divider(
-                 height: 0.5,
-                 color: Colors.black,
+                 itemCount: students.length,
+                 itemBuilder: (context, index){
+                   return Column(
+                     children: [
+                       ListTile(
+                         title: Text(students[index]),
+                         // tileColor: Colors.grey.shade400,
+                         // title: Text('tonmoy'),
+                         // subtitle: Text('Tanjid'),
+                         // leading: Text('islam'),
+                         // trailing: Text('tit'),
+                       ),
+                       // Divider(
+                       //   height: 0.5,
+                       //   color: Colors.black,
+                       // )
+                     ],
+                   );
+                 },
+                  separatorBuilder: (context, index){
+                   return  Divider(
+                   height: 0.5,
+                   color: Colors.black,
    );
 
    },
 
 
+             ),
            ),
            SizedBox(
              height:120 ,
